@@ -12,7 +12,7 @@ export default function Page() {
     <CategoryLayout
       label="Project Articles"
       description="Behind-the-scenes logs from real engagements."
-      longDescription="Honest project logs — including what didn't work on the first attempt and what we changed. Written from live deployments at NXTGEN Industries, MEDVA/Deel PH, SAP Philippines, and GemuCube client engagements."
+      longDescription="Honest project logs — including what didn&apos;t work on the first attempt and what we changed. Written from live deployments at NXTGEN Industries, MEDVA/Deel PH, SAP Philippines, and GemuCube client engagements."
       articles={projectArticles}
       categorySlug="project-articles"
     />

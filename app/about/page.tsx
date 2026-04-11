@@ -28,9 +28,9 @@ const adamStack = ['Salesforce', 'ServiceNow', 'Zoho CRM', 'AgileCRM', 'ClickUp'
 const renzStack = ['JIRA', 'ServiceNow', 'Zendesk', 'Monday.com', 'TeamViewer', 'AnyDesk', 'LogMeIn', 'RDP', 'M365 Admin Center', 'Azure IAM', 'Intune', 'Avaya', 'Genesys', 'Zapier', 'LastPass', '1Password']
 
 const values = [
-  { title: 'Partnership Over Transactions', body: 'We measure success by how well your business scales, not by how many invoices we send. Every system we build is designed to outlast our direct involvement.' },
-  { title: 'Expertise Without Layers', body: 'No account managers. No hand-offs. The people who understand your business are the people working on it — Adam and Renz, directly, on every engagement.' },
-  { title: 'Enterprise Quality for Every Stage', body: 'Whether you're a 3-person startup or a 300-seat operation, you deserve systems built to the same standards that enterprises depend on.' },
+  { title: 'Partnership Over Transactions', body: "We measure success by how well your business scales, not by how many invoices we send. Every system we build is designed to outlast our direct involvement." },
+  { title: 'Expertise Without Layers', body: "No account managers. No hand-offs. The people who understand your business are the people working on it — Adam and Renz, directly, on every engagement." },
+  { title: 'Enterprise Quality for Every Stage', body: "Whether you're a 3-person startup or a 300-seat operation, you deserve systems built to the same standards that enterprises depend on." },
 ]
 
 function FounderCard({ name, title, period, email, phone, linkedin, experience, certs, stack, summary }: {

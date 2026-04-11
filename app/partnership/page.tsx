@@ -40,7 +40,7 @@ const models = [
       'Monthly dedicated hours — scoped to your growth stage',
       'Ongoing CRM development and workflow automation',
       'Managed IT helpdesk and support operations',
-      'Monthly strategy review — what we built, what's next',
+      'Monthly strategy review — what we built, what\'s next',
       'Priority response on all support requests',
     ],
     examples: [
