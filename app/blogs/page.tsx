@@ -29,7 +29,7 @@ const categoryColors: Record<string, string> = {
   'Digital Marketing': 'bg-orange-500/10 text-orange-400 border-orange-500/20',
 }
 
-const categories = [...new Set(blogs.map((b) => b.category))]
+const categories = Array.from(new Set(blogs.map((b) => b.category)))
 
 export default function BlogsPage() {
   const featured = blogs[0]
