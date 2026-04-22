@@ -1,8 +1,9 @@
 import { MetadataRoute } from 'next'
 import { allArticles } from '@/lib/articles'
+import { projects, blogs } from '@/lib/content'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = 'https://gemucube.com'
+  const base = 'https://home.gemucubesolutions.com'
 
   const staticPages = [
     { url: base, priority: 1.0, changeFrequency: 'weekly' as const },
@@ -10,6 +11,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/solutions`, priority: 0.9, changeFrequency: 'monthly' as const },
     { url: `${base}/partnership`, priority: 0.8, changeFrequency: 'monthly' as const },
     { url: `${base}/case-studies`, priority: 0.9, changeFrequency: 'weekly' as const },
+    { url: `${base}/projects`, priority: 0.9, changeFrequency: 'weekly' as const },
+    { url: `${base}/blogs`, priority: 0.9, changeFrequency: 'weekly' as const },
     { url: `${base}/contact`, priority: 0.8, changeFrequency: 'monthly' as const },
     { url: `${base}/articles`, priority: 0.7, changeFrequency: 'weekly' as const },
     { url: `${base}/articles/business-guides`, priority: 0.7, changeFrequency: 'weekly' as const },
@@ -24,5 +27,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly' as const,
   }))
 
-  return [...staticPages, ...articlePages]
+  const projectPages = projects.map(p => ({
+    url: `${base}/projects/${p.slug}`,
+    priority: 0.8,
+    changeFrequency: 'monthly' as const,
+  }))
+
+  const blogPages = blogs.map(b => ({
+    url: `${base}/blogs/${b.slug}`,
+    priority: 0.8,
+    changeFrequency: 'monthly' as const,
+  }))
+
+  return [...staticPages, ...articlePages, ...projectPages, ...blogPages]
 }

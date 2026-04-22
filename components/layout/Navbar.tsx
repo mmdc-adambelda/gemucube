@@ -10,6 +10,8 @@ const links = [
   { href: '/about', label: 'About' },
   { href: '/solutions', label: 'Solutions' },
   { href: '/partnership', label: 'Partnership' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/blogs', label: 'Blog' },
   { href: '/case-studies', label: 'Case Studies' },
 ]
 
@@ -53,14 +55,14 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden lg:flex items-center gap-0.5">
           {links.map((l) => {
-            const active = pathname === l.href
+            const active = pathname === l.href || (l.href !== '/' && pathname.startsWith(l.href))
             return (
               <Link
                 key={l.href}
                 href={l.href}
-                className={`px-4 py-2 text-[14px] font-medium rounded-sm transition-all ${
+                className={`px-3 py-2 text-[13px] font-medium rounded-sm transition-all ${
                   active
                     ? 'text-[#FFDB49]'
                     : 'text-white/60 hover:text-white/90'
@@ -95,7 +97,7 @@ export default function Navbar() {
       {/* Mobile menu */}
       <div
         className={`lg:hidden transition-all duration-300 overflow-hidden ${
-          open ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+          open ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'
         } bg-[rgba(8,8,8,0.95)] backdrop-blur-xl border-b border-white/[0.06]`}
       >
         <nav className="px-6 py-6 flex flex-col gap-1">
@@ -105,7 +107,9 @@ export default function Navbar() {
               href={l.href}
               onClick={() => setOpen(false)}
               className={`py-3 text-[15px] font-medium border-b border-white/[0.05] ${
-                pathname === l.href ? 'text-[#FFDB49]' : 'text-white/70'
+                pathname === l.href || (l.href !== '/' && pathname.startsWith(l.href))
+                  ? 'text-[#FFDB49]'
+                  : 'text-white/70'
               }`}
             >
               {l.label}
