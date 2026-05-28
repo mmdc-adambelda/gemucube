@@ -24,7 +24,7 @@ const team = [
     initials: 'AB',
     name: 'Adam Belda',
     role: 'CEO & Founder',
-    bio: 'Certified Project Manager and Scrum Master with 13+ years of IT and business operations experience. Career spanning SAP Philippines, Emapta, NXTGEN Industries Melbourne, and MEDVA/Deel PH. Architect of GemuCube's systems, products, and partnership model.',
+    bio: "Certified Project Manager and Scrum Master with 13+ years of IT and business operations experience. Career spanning SAP Philippines, Emapta, NXTGEN Industries Melbourne, and MEDVA/Deel PH. Architect of GemuCube's systems, products, and partnership model.",
     email: 'argbelda@gmail.com',
     phone: '+63 947 895 4125',
     linkedin: 'https://linkedin.com/in/adambelda',
@@ -50,7 +50,7 @@ const team = [
     initials: 'VC',
     name: 'Villie Camilon',
     role: 'Business Development Officer',
-    bio: 'Leads GemuCube's client acquisition, partnership development, and market expansion. Bridges the gap between client needs and technical solutions — ensuring every engagement starts with full clarity and ends with real results.',
+    bio: "Leads GemuCube's client acquisition, partnership development, and market expansion. Bridges the gap between client needs and technical solutions — ensuring every engagement starts with full clarity and ends with real results.",
     email: null,
     phone: null,
     linkedin: 'https://linkedin.com/in/villiecamilon',
@@ -74,7 +74,7 @@ const team = [
 
 const values = [
   { num: '01', title: 'Direct Access', body: 'Every client engagement involves the team directly. No account managers sitting between you and the people doing the work.' },
-  { num: '02', title: 'Enterprise Credentials', body: 'Our team's experience spans SAP, Emapta, NXTGEN Industries Melbourne, MEDVA/Deel PH, TaskUs, and Intelegencia.' },
+  { num: '02', title: 'Enterprise Credentials', body: "Our team's experience spans SAP, Emapta, NXTGEN Industries Melbourne, MEDVA/Deel PH, TaskUs, and Intelegencia." },
   { num: '03', title: 'Full-Stack Capability', body: 'From business operations to software engineering to digital growth — one team covers the full spectrum.' },
   { num: '04', title: 'Embedded, Not Outsourced', body: 'We work as part of your team, not as a vendor standing outside billing by the hour.' },
 ]
