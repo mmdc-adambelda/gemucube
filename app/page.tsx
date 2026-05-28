@@ -174,6 +174,70 @@ export default function HomePage() {
         </div>
       </section>
 
+
+      {/* PRODUCTS */}
+      <section className="section-pad bg-[#0a0a0a]" id="products">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-16">
+            <div>
+              <p className="eyebrow mb-4">Software Products</p>
+              <h2 className="font-display text-4xl sm:text-5xl text-white max-w-xl">
+                Six platforms.<br />
+                <span className="text-gradient">Every operation.</span>
+              </h2>
+            </div>
+            <Link href="/products" className="btn-ghost self-start lg:self-auto shrink-0">
+              View all products <ArrowRight size={15} />
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { slug: 'payrolltrack-ai', name: 'PayrollTrack AI', tagline: 'AI-powered payroll & attendance with face recognition.', icon: '⏱', color: '#3B82F6', badge: 'AI-Powered' },
+              { slug: 'clinicore', name: 'CliniCore', tagline: 'Multi-clinic EMR/EHR with AI clinical assistant.', icon: '🩺', color: '#10B981', badge: 'HIPAA-Ready' },
+              { slug: 'nexuslink', name: 'NexusLink', tagline: 'Private community management for HOAs & organizations.', icon: '🏘', color: '#8B5CF6', badge: 'Community' },
+              { slug: 'reservio', name: 'Reservio', tagline: 'Automated booking & revenue tracking for service businesses.', icon: '📅', color: '#F59E0B', badge: 'Multi-Industry' },
+              { slug: 'learnflow', name: 'LearnFlow', tagline: 'LMS with AI chatbot, student portal & online classes.', icon: '🎓', color: '#EC4899', badge: 'EduTech' },
+              { slug: 'ledgeriq', name: 'LedgerIQ', tagline: 'Modern digital ledger & accounting for Philippine SMEs.', icon: '📊', color: '#14B8A6', badge: 'SME-Ready' },
+            ].map((p) => (
+              <Link
+                key={p.slug}
+                href={`/products/${p.slug}`}
+                className="glass-card rounded-lg p-6 relative overflow-hidden group block"
+              >
+                <div
+                  className="absolute top-0 left-0 right-0 h-[2px] opacity-40 group-hover:opacity-100 transition-opacity"
+                  style={{ background: p.color }}
+                />
+                <div className="flex items-center gap-3 mb-4">
+                  <div
+                    className="w-10 h-10 rounded-sm flex items-center justify-center text-xl"
+                    style={{ background: `${p.color}15`, border: `1px solid ${p.color}30` }}
+                  >
+                    {p.icon}
+                  </div>
+                  <div>
+                    <p className="text-white font-semibold text-sm group-hover:text-[#FFDB49] transition-colors">{p.name}</p>
+                    <span className="text-[10px] font-mono" style={{ color: p.color }}>{p.badge}</span>
+                  </div>
+                </div>
+                <p className="text-white/45 text-xs leading-relaxed mb-4">{p.tagline}</p>
+                <div className="flex items-center gap-1 text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: p.color }}>
+                  Explore <ArrowRight size={12} />
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-10 glass-card rounded-lg px-7 py-5 flex flex-col sm:flex-row items-center justify-between gap-4 border-[rgba(255,219,73,0.1)]">
+            <p className="text-white/55 text-sm">
+              Every product is <span className="text-white font-semibold">fully customizable</span> to your industry, workflows, and brand.
+            </p>
+            <Link href="/contact" className="btn-primary text-sm py-2.5 px-6 shrink-0">
+              Request a Demo <ArrowRight size={14} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* PROCESS */}
       <section className="section-pad bg-[#0a0a0a] grid-bg relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">

@@ -5,6 +5,10 @@ import { projects, blogs } from '@/lib/content'
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://home.gemucubesolutions.com'
 
+  const productSlugs = [
+    'payrolltrack-ai', 'clinicore', 'nexuslink', 'reservio', 'learnflow', 'ledgeriq',
+  ]
+
   const staticPages = [
     { url: base, priority: 1.0, changeFrequency: 'weekly' as const },
     { url: `${base}/about`, priority: 0.9, changeFrequency: 'monthly' as const },
@@ -14,6 +18,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/projects`, priority: 0.9, changeFrequency: 'weekly' as const },
     { url: `${base}/blogs`, priority: 0.9, changeFrequency: 'weekly' as const },
     { url: `${base}/contact`, priority: 0.8, changeFrequency: 'monthly' as const },
+    { url: `${base}/products`, priority: 0.9, changeFrequency: 'monthly' as const },
+    ...productSlugs.map(slug => ({
+      url: `${base}/products/${slug}`,
+      priority: 0.85,
+      changeFrequency: 'monthly' as const,
+    })),
     { url: `${base}/articles`, priority: 0.7, changeFrequency: 'weekly' as const },
     { url: `${base}/articles/business-guides`, priority: 0.7, changeFrequency: 'weekly' as const },
     { url: `${base}/articles/tech-operation-guides`, priority: 0.7, changeFrequency: 'weekly' as const },

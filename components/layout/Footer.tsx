@@ -6,11 +6,21 @@ const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/solutions', label: 'Solutions' },
+  { href: '/products', label: 'Products' },
   { href: '/partnership', label: 'Partnership Models' },
   { href: '/projects', label: 'Projects' },
   { href: '/blogs', label: 'Blog' },
   { href: '/case-studies', label: 'Case Studies' },
   { href: '/contact', label: 'Contact' },
+]
+
+const productLinks = [
+  { href: '/products/payrolltrack-ai', label: 'PayrollTrack AI' },
+  { href: '/products/clinicore', label: 'CliniCore' },
+  { href: '/products/nexuslink', label: 'NexusLink' },
+  { href: '/products/reservio', label: 'Reservio' },
+  { href: '/products/learnflow', label: 'LearnFlow' },
+  { href: '/products/ledgeriq', label: 'LedgerIQ' },
 ]
 
 const services = [
@@ -28,7 +38,7 @@ export default function Footer() {
       <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#FFDB49] to-transparent opacity-40" />
 
       <div className="max-w-7xl mx-auto px-6 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
 
           {/* Col 1 — Brand */}
           <div className="lg:col-span-1">
@@ -82,7 +92,30 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 4 — Contact */}
+          {/* Col 4 — Products */}
+          <div>
+            <p className="eyebrow mb-5">Products</p>
+            <ul className="flex flex-col gap-3">
+              {productLinks.map((p) => (
+                <li key={p.href}>
+                  <Link
+                    href={p.href}
+                    className="text-white/50 text-sm hover:text-[#FFDB49] transition-colors flex items-center gap-1 group"
+                  >
+                    {p.label}
+                    <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link href="/products" className="text-[#FFDB49] text-xs font-mono hover:underline">
+                  View all →
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Col 5 — Contact */}
           <div>
             <p className="eyebrow mb-5">Direct Contact</p>
             <div className="space-y-6">
