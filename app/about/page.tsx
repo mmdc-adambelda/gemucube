@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
+import FallbackImage from '@/components/ui/FallbackImage'
 import Link from 'next/link'
-import Image from 'next/image'
 import { Mail, Phone, Linkedin, ArrowRight, CheckCircle, Users, Globe, Cpu, TrendingUp, Package } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -186,12 +186,10 @@ export default function AboutPage() {
             {/* Company image placeholder */}
             <div className="relative">
               <div className="relative rounded-xl overflow-hidden border border-white/[0.08] aspect-[4/3] bg-[#111] flex items-center justify-center">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <FallbackImage
                   src="/assets/about/company-photo.jpg"
                   alt="GemuCube Solutions team"
                   className="w-full h-full object-cover"
-                  onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none' }}
                 />
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8">
                   <p className="eyebrow text-[10px] mb-3">Company Photo</p>
@@ -355,12 +353,11 @@ export default function AboutPage() {
 
                   {/* Photo */}
                   <div className="relative aspect-square bg-[#111] overflow-hidden">
-                    <Image
+                    <FallbackImage
                       src={member.image!}
                       alt={member.name!}
                       fill
                       className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                      onError={() => {}}
                     />
                     {/* Fallback overlay — shows when image missing */}
                     <div className="absolute inset-0 flex items-center justify-center bg-[rgba(255,219,73,0.04)]">
@@ -435,12 +432,10 @@ export default function AboutPage() {
 
           {/* Team image placeholder — full width */}
           <div className="mt-10 rounded-xl border border-white/[0.06] bg-[#0e0e0e] aspect-[21/6] relative overflow-hidden flex items-center justify-center">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <FallbackImage
               src="/assets/about/team-photo.jpg"
               alt="GemuCube Solutions team"
               className="w-full h-full object-cover object-center"
-              onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none' }}
             />
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
               <p className="eyebrow text-[10px] mb-2">Team Photo Banner</p>
