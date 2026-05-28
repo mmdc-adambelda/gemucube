@@ -1,0 +1,13 @@
+=== ABOUT PAGE IMAGES ===
+
+1. company-photo.jpg
+   - Used in: About page "Who We Are" section (right side)
+   - Recommended: 800x600px or 4:3 ratio
+   - Type: Office photo, team working, or professional company setting
+   - Format: JPG (compressed for web, <300KB)
+
+2. team-photo.jpg
+   - Used in: About page "The Team" section (full-width banner below team cards)
+   - Recommended: 1400x400px minimum, landscape/panoramic
+   - Type: Full team group photo, wide shot
+   - Format: JPG (compressed for web, <400KB)

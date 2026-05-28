@@ -1,0 +1,24 @@
+=== TEAM MEMBER PHOTOS ===
+
+Upload square or portrait photos for each team member.
+The cards use aspect-square so images will be cropped to square from the top.
+
+1. adam-belda.jpg
+   - Used in: Team card for Adam Belda (CEO & Founder)
+   - Recommended: 400x400px minimum, square or portrait
+   - Type: Professional headshot or business photo
+   - Format: JPG, <200KB
+
+2. renz-belda.jpg
+   - Used in: Team card for Renz Belda (Product Owner)
+   - Recommended: 400x400px minimum, square or portrait
+   - Type: Professional headshot or business photo
+   - Format: JPG, <200KB
+
+3. villie-camilon.jpg
+   - Used in: Team card for Villie Camilon (Business Development Officer)
+   - Recommended: 400x400px minimum, square or portrait
+   - Type: Professional headshot or business photo
+   - Format: JPG, <200KB
+
+NAMING IS EXACT — filenames must match exactly (lowercase, hyphen-separated).
