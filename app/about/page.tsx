@@ -4,8 +4,8 @@ import Link from 'next/link'
 import { Mail, Phone, Linkedin, ArrowRight, CheckCircle, Users, Globe, Cpu, TrendingUp, Package } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'About GemuCube Solutions — Our Story, Team & Mission',
-  description: 'GemuCube Solutions started in 2023 as an IT & web development firm. Today we build SaaS products, deliver business automation, and partner with companies across the globe.',
+  title: 'About GemuCube Solutions — Our Story, Mission & Values',
+  description: 'GemuCube Solutions started in 2023 as an IT & web development firm. Today we build SaaS products, deliver business automation, and partner with companies across the globe. Learn our story, mission, and values.',
 }
 
 // ─── TIMELINE ────────────────────────────────────────────────────────────────
@@ -60,61 +60,6 @@ const values = [
   { title: 'Enterprise Quality for Every Stage', body: 'Whether you are a 3-person startup or a 300-seat operation, you deserve systems built to the same standards that enterprises depend on.' },
 ]
 
-// ─── TEAM ────────────────────────────────────────────────────────────────────
-const team = [
-  {
-    id: 'adam',
-    image: '/assets/team/adam-belda.jpg',
-    initials: 'AB',
-    name: 'Adam Belda',
-    role: 'CEO & Founder',
-    bio: 'Certified Project Manager and Scrum Master with 13+ years of IT and business operations experience. Career spanning SAP Philippines, Emapta, NXTGEN Industries Melbourne, and MEDVA/Deel PH. Architect of GemuCube\'s systems, products, and partnership model.',
-    email: 'argbelda@gmail.com',
-    phone: '+63 947 895 4125',
-    linkedin: 'https://linkedin.com/in/adambelda',
-    tags: ['PMP Certified', 'Lean Six Sigma Black Belt', 'SAP Engineer', 'Fractional CTO'],
-    available: true,
-  },
-  {
-    id: 'renz',
-    image: '/assets/team/renz-belda.jpg',
-    initials: 'RB',
-    name: 'Renz Belda',
-    role: 'Product Owner',
-    bio: 'IT professional with deep hands-on expertise in enterprise support operations, product quality, and AI data systems. Experienced across NXTGEN Industries, Intelegencia, and TaskUs. Leads product delivery and operational quality at GemuCube.',
-    email: 'rgutierrezbelda@gmail.com',
-    phone: '+63 960 548 9073',
-    linkedin: 'https://linkedin.com/in/renzbelda',
-    tags: ['Product Management', 'JIRA & ServiceNow', 'QA & QC', 'AI Data Systems'],
-    available: true,
-  },
-  {
-    id: 'villie',
-    image: '/assets/team/villie-camilon.jpg',
-    initials: 'VC',
-    name: 'Villie Camilon',
-    role: 'Business Development Officer',
-    bio: 'Leads GemuCube\'s client acquisition, partnership development, and market expansion. Bridges the gap between client needs and technical solutions — ensuring every engagement starts with full clarity and ends with real results.',
-    email: null,
-    phone: null,
-    linkedin: 'https://linkedin.com/in/villiecamilon',
-    tags: ['Business Development', 'Partnerships', 'Client Relations', 'Market Expansion'],
-    available: true,
-  },
-  {
-    id: 'coming-soon',
-    image: null,
-    initials: '?',
-    name: null,
-    role: 'Product Owner',
-    bio: null,
-    email: null,
-    phone: null,
-    linkedin: null,
-    tags: [],
-    available: false,
-  },
-]
 
 // ─── CLIENTS ─────────────────────────────────────────────────────────────────
 const pioneers = ['NXTGEN Industries', 'Impero', 'Private E-Commerce Agency']
@@ -332,122 +277,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── THE TEAM ── */}
-      <section className="section-pad" id="team">
-        <div className="max-w-7xl mx-auto px-6">
-          <p className="eyebrow mb-5">The Team</p>
-          <h2 className="font-display text-4xl sm:text-5xl text-white mb-5 max-w-2xl">
-            The people you will<br />
-            <span className="text-gradient">actually work with.</span>
-          </h2>
-          <p className="text-white/45 text-lg mb-16 max-w-xl leading-relaxed">
-            No account managers sitting between you and the people doing the work. When you engage GemuCube,
-            you engage the team directly.
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {team.map(member => (
-              member.available ? (
-                <div key={member.id} className="glass-card rounded-xl overflow-hidden group relative flex flex-col">
-                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#FFDB49] via-[#FFDB49]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-
-                  {/* Photo */}
-                  <div className="relative aspect-square bg-[#111] overflow-hidden">
-                    <FallbackImage
-                      src={member.image!}
-                      alt={member.name!}
-                      fill
-                      className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                    />
-                    {/* Fallback overlay — shows when image missing */}
-                    <div className="absolute inset-0 flex items-center justify-center bg-[rgba(255,219,73,0.04)]">
-                      <span className="font-display text-5xl text-[#FFDB49]/30">{member.initials}</span>
-                    </div>
-                    {/* Gradient overlay at bottom */}
-                    <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#0e0e0e] to-transparent" />
-                  </div>
-
-                  {/* Info */}
-                  <div className="p-6 flex flex-col flex-1">
-                    <h3 className="font-display text-xl text-white mb-1">{member.name}</h3>
-                    <p className="text-[#FFDB49] text-xs font-mono tracking-widest uppercase mb-4">{member.role}</p>
-                    <p className="text-white/45 text-sm leading-relaxed mb-5 flex-1">{member.bio}</p>
-
-                    {/* Tags */}
-                    {member.tags.length > 0 && (
-                      <div className="flex flex-wrap gap-1.5 mb-5">
-                        {member.tags.map(tag => (
-                          <span key={tag} className="text-[10px] px-2 py-0.5 bg-white/[0.04] border border-white/[0.07] rounded text-white/40">{tag}</span>
-                        ))}
-                      </div>
-                    )}
-
-                    {/* Contact links */}
-                    <div className="flex items-center gap-3 pt-4 border-t border-white/[0.06]">
-                      {member.email && (
-                        <a href={`mailto:${member.email}`} className="text-white/30 hover:text-[#FFDB49] transition-colors" aria-label="Email">
-                          <Mail size={14} />
-                        </a>
-                      )}
-                      {member.phone && (
-                        <a href={`tel:${member.phone.replace(/\s/g,'')}`} className="text-white/30 hover:text-[#FFDB49] transition-colors" aria-label="Phone">
-                          <Phone size={14} />
-                        </a>
-                      )}
-                      {member.linkedin && (
-                        <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-white/30 hover:text-[#FFDB49] transition-colors" aria-label="LinkedIn">
-                          <Linkedin size={14} />
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              ) : (
-                /* ── Coming Soon card ── */
-                <div key={member.id} className="glass-card rounded-xl overflow-hidden relative flex flex-col border-dashed border-white/[0.06]">
-                  <div className="aspect-square bg-[#0a0a0a] flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-16 h-16 rounded-full border-2 border-dashed border-white/10 flex items-center justify-center mx-auto mb-3">
-                        <span className="text-white/20 text-2xl">+</span>
-                      </div>
-                      <p className="text-white/20 text-xs font-mono">Photo coming soon</p>
-                    </div>
-                  </div>
-                  <div className="p-6 flex flex-col flex-1">
-                    <div className="h-6 w-32 bg-white/[0.04] rounded mb-2" />
-                    <p className="text-[#FFDB49]/40 text-xs font-mono tracking-widest uppercase mb-4">{member.role}</p>
-                    <div className="space-y-2 flex-1">
-                      <div className="h-3 bg-white/[0.03] rounded w-full" />
-                      <div className="h-3 bg-white/[0.03] rounded w-4/5" />
-                      <div className="h-3 bg-white/[0.03] rounded w-3/5" />
-                    </div>
-                    <div className="mt-5 pt-4 border-t border-white/[0.04]">
-                      <span className="chip text-[10px]">Coming Soon</span>
-                    </div>
-                  </div>
-                </div>
-              )
-            ))}
-          </div>
-
-          {/* Team image placeholder — full width */}
-          <div className="mt-10 rounded-xl border border-white/[0.06] bg-[#0e0e0e] aspect-[21/6] relative overflow-hidden flex items-center justify-center">
-            <FallbackImage
-              src="/assets/about/team-photo.jpg"
-              alt="GemuCube Solutions team"
-              className="w-full h-full object-cover object-center"
-            />
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-              <p className="eyebrow text-[10px] mb-2">Team Photo Banner</p>
-              <p className="text-white/20 text-xs font-mono">
-                Upload to: <span className="text-[#FFDB49]/50">public/assets/about/team-photo.jpg</span>
-                <span className="block mt-1">Recommended: 1400×400px or wider, landscape</span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ── CTA ── */}
       <section className="py-24 bg-[#0e0e0e] border-t border-white/[0.06] relative overflow-hidden">
         <div className="glow-orb w-[500px] h-[300px] bg-[#FFDB49] opacity-[0.05] top-0 left-1/2 -translate-x-1/2" />
@@ -468,6 +297,9 @@ export default function AboutPage() {
             </Link>
             <Link href="/products" className="btn-ghost">
               View Our Products
+            </Link>
+            <Link href="/team" className="btn-ghost">
+              Meet the Team
             </Link>
           </div>
         </div>

@@ -5,6 +5,7 @@ import { Mail, Phone, Linkedin, MapPin, ArrowUpRight } from 'lucide-react'
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
+  { href: '/team', label: 'The Team' },
   { href: '/solutions', label: 'Solutions' },
   { href: '/products', label: 'Products' },
   { href: '/partnership', label: 'Partnership Models' },
